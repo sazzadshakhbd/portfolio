@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
   <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="assets/css/demo.css">
 
 </head>
 
@@ -46,6 +47,12 @@
         </div>
       </div>
     </div>
+    <div class="curv-img">
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px" y="0px" viewBox="0 0 1920 238" enable-background="new 0 0 1920 238" xml:space="preserve">
+        <path fill="#ffffff" d="M0,0c0,0,888.955,518.735,1920,0c-0.5,149.535,0,238,0,238H0V0z" />
+      </svg>
+    </div>
   </section>
 
 
@@ -59,6 +66,13 @@
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/popper.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
+  <script>
+    $('#status').fadeOut();
+    $('#preloader').delay(350).fadeOut('slow');
+    $('body').delay(350).css({
+      'overflow': 'visible'
+    });
+  </script>
 </body>
 
 </html>
