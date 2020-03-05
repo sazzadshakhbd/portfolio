@@ -4,35 +4,40 @@ General CSS
 @font-face {
   font-family: "Cerebri Sans,sans-serif";
   src: url("../fonts/cerebrisans-light.eot");
-  src: local("Cerebri-sans Light"), url("../fonts/cerebrisans-light.woff") format("woff");
+  src: local("Cerebri-sans Light"),
+    url("../fonts/cerebrisans-light.woff") format("woff");
   font-weight: 300;
 }
 
 @font-face {
   font-family: "Cerebri Sans,sans-serif";
   src: url("../fonts/cerebrisans-regular.eot");
-  src: local("Cerebri-sans Regular"), url("../fonts/cerebrisans-regular.woff") format("woff");
+  src: local("Cerebri-sans Regular"),
+    url("../fonts/cerebrisans-regular.woff") format("woff");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Cerebri Sans,sans-serif";
   src: url("../fonts/cerebrisans-medium.eot");
-  src: local("Cerebri-sans Medium"), url("../fonts/cerebrisans-medium.woff") format("woff");
+  src: local("Cerebri-sans Medium"),
+    url("../fonts/cerebrisans-medium.woff") format("woff");
   font-weight: 500;
 }
 
 @font-face {
   font-family: "Cerebri Sans,sans-serif";
   src: url("../fonts/cerebrisans-semibold.eot");
-  src: local("Cerebri-sans Semibold"), url("../fonts/cerebrisans-semibold.woff") format("woff");
+  src: local("Cerebri-sans Semibold"),
+    url("../fonts/cerebrisans-semibold.woff") format("woff");
   font-weight: 600;
 }
 
 @font-face {
   font-family: "Cerebri Sans,sans-serif";
   src: url("../fonts/cerebrisans-bold.eot");
-  src: local("Cerebri-sans Bold"), url("../fonts/cerebrisans-bold.woff") format("woff");
+  src: local("Cerebri-sans Bold"),
+    url("../fonts/cerebrisans-bold.woff") format("woff");
   font-weight: 700;
 }
 
@@ -124,7 +129,6 @@ Preloader CSS
 Home Section
 *****************************************/
 
-
 .home-section {
   background-image: url(../../light-images/header-bg.jpg);
   background-size: cover;
@@ -156,10 +160,9 @@ Home Section
   height: 38px;
 }
 
-.demo-logo {
-  height: 50px;
-  margin-bottom: 10px;
-}
+/****************************************  
+Details Section
+*****************************************/
 
 .home-img-box {
   padding: 20px 0 30px 0;
@@ -193,14 +196,9 @@ Home Section
   color: #3c3c3c;
 }
 
-.ti_bo {
-  height: 3px;
-  width: 36px;
-  display: inline-block;
-  background-color: #e65f78;
-}
+/* Start nav-pill-customization */
 
-.nav-link {
+.customize-nav-pills .nav-link {
   font-size: 22px;
   padding: 0px 0px 10px;
   margin: 0px 10px;
@@ -208,19 +206,46 @@ Home Section
   color: #7b7b7b !important;
 }
 
-.nav-pills .nav-link.active,
-.nav-pills .show>.nav-link {
+.customize-nav-pills .nav-pills .nav-link.active,
+.customize-nav-pills .nav-pills .show > .nav-link {
   background-color: transparent !important;
   border-radius: 0px !important;
   border-bottom: 2px solid #e65f78;
   color: #000 !important;
 }
 
+/****************************************  
+Footer Section
+*****************************************/
+
 .footer {
   padding: 30px 0px;
   background-color: #f8f9fa;
 }
 
+.copyright {
+  font-size: 20px;
+}
+
+@media (min-width: 200px) and (max-width: 768px) {
+  .home-wrapper {
+    padding: 70px 0px 20px;
+  }
+
+  .curv-img {
+    bottom: 0px;
+  }
+
+  .customize-nav-pills .nav-link {
+    padding: 10px 0px 10px;
+  }
+}
+
+/* Unknown CSS */
+/* .demo-logo {
+  height: 50px;
+  margin-bottom: 10px;
+}
 .border {
   height: 4px;
   width: 60px;
@@ -232,10 +257,6 @@ Home Section
 .title {
   margin-bottom: 15px;
   font-size: 22px;
-}
-
-.copyright {
-  font-size: 20px;
 }
 
 .btn {
@@ -263,22 +284,14 @@ Home Section
 .btn-custom:active,
 .btn-custom:focus,
 .btn-custom:hover,
-.open>.dropdown-toggle.btn-custom {
+.open > .dropdown-toggle.btn-custom {
   background-color: #e6475e;
   border-color: #e6475e;
   color: #f3f3f3;
 }
-
-@media (min-width: 200px) and (max-width: 768px) {
-  .home-wrapper {
-    padding: 70px 0px 20px;
-  }
-
-  .curv-img {
-    bottom: 0px;
-  }
-
-  .nav-link {
-    padding: 10px 0px 10px;
-  }
-}
+.ti_bo {
+  height: 3px;
+  width: 36px;
+  display: inline-block;
+  background-color: #e65f78;
+} */
