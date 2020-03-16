@@ -1,842 +1,626 @@
-/*-----------------------------------------------------------
-* Template Name    : Kerri | Responsive Bootstrap 4 Personal Template
-* Author           : SRBThemes
-* Version          : 1.0.0
-* Created          : March 2018
-* File Description : Main css file of the template
-*------------------------------------------------------------
-*/
-
-
-/***********************
-    1.BASIC
-    2.HELPER
-    3.NAVBAR
-    4.HOME
-    5.ABOUT 
-    6.SERVICES
-    7.CLIENT
-    8.WORK
-    9.CONTACT
-    10.FOOTER
-    11.RESPONSIVE
-************************/
-
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Nunito:400,600,700');
-
-/*======================
-        1.BASIC
-========================*/
-
-body {
-    font-family: 'Nunito', sans-serif;
-    overflow-x: hidden;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Montserrat', sans-serif;
-}
-
-a,
-a:hover,
-a:focus,
-button,
-button:focus {
-    text-decoration: none !important;
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-::selection {
-    background: rgba(166, 175, 189, 0.3);
-}
-
-::-moz-selection {
-    background: rgba(166, 175, 189, 0.3);
-}
-
-#preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #fff;
-    z-index: 9999999;
-}
-
-#status {
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin: -20px 0 0 -20px;
+@font-face {
+  font-family: 'MobiriseIcons';
+  src: url('../fonts/mobirise.eot');
+  src: url('../fonts/mobirise.eot') format('embedded-opentype'),
+    url('../fonts/mobirise.ttf') format('truetype'),
+    url('../fonts/mobirise.woff') format('woff'),
+    url('../fonts/mobirise.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.spinner {
-    margin: 0 auto;
-    font-size: 10px;
-    position: relative;
-    text-indent: -9999em;
-    border-top: 5px solid rgba(0, 0, 0, 0.2);
-    border-right: 5px solid rgba(0, 0, 0, 0.2);
-    border-bottom: 5px solid rgba(0, 0, 0, 0.2);
-    border-left: 5px solid #000;
-    -webkit-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-animation: load8 1.1s infinite linear;
-    animation: load8 1.1s infinite linear;
+[class^="mbri-"],
+[class*=" mbri-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'MobiriseIcons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.mbri-add-submenu:before {
+  content: "\e900";
+}
+
+.mbri-alert:before {
+  content: "\e901";
+}
+
+.mbri-align-center:before {
+  content: "\e902";
+}
+
+.mbri-align-justify:before {
+  content: "\e903";
+}
+
+.mbri-align-left:before {
+  content: "\e904";
+}
+
+.mbri-align-right:before {
+  content: "\e905";
+}
+
+.mbri-android:before {
+  content: "\e906";
+}
+
+.mbri-apple:before {
+  content: "\e907";
+}
+
+.mbri-arrow-down:before {
+  content: "\e908";
+}
+
+.mbri-arrow-next:before {
+  content: "\e909";
+}
+
+.mbri-arrow-prev:before {
+  content: "\e90a";
+}
+
+.mbri-arrow-up:before {
+  content: "\e90b";
+}
+
+.mbri-bold:before {
+  content: "\e90c";
+}
+
+.mbri-bookmark:before {
+  content: "\e90d";
 }
 
-.spinner,
-.spinner:after {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
+.mbri-bootstrap:before {
+  content: "\e90e";
 }
 
-@-webkit-keyframes load8 {
-    0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
+.mbri-briefcase:before {
+  content: "\e90f";
+}
 
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
+.mbri-browse:before {
+  content: "\e910";
 }
 
-@keyframes load8 {
-    0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
+.mbri-bulleted-list:before {
+  content: "\e911";
+}
 
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
+.mbri-calendar:before {
+  content: "\e912";
 }
 
-.back_top {
-    text-align: center;
-    position: fixed;
-    bottom: 15px;
-    height: 35px;
-    width: 35px;
-    display: none;
-    z-index: 10000;
-    border-radius: 3px;
-    right: 20px;
-    transition: all 0.5s;
+.mbri-camera:before {
+  content: "\e913";
 }
 
-.back_top i {
-    color: #fff;
-    line-height: 35px;
-    font-size: 32px;
-    display: block;
+.mbri-cart-add:before {
+  content: "\e914";
 }
 
+.mbri-cart-full:before {
+  content: "\e915";
+}
 
-/*==========================
-        2.HELPER
-============================*/
+.mbri-cash:before {
+  content: "\e916";
+}
 
-.section {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    position: relative;
-    background-color: #fff;
+.mbri-change-style:before {
+  content: "\e917";
 }
 
-.h-100vh {
-    height: 100vh;
+.mbri-chat:before {
+  content: "\e918";
 }
 
-.z-index {
-    z-index: 2;
+.mbri-clock:before {
+  content: "\e919";
 }
 
-.clippath_none {
-    clip-path: none !important;
+.mbri-close:before {
+  content: "\e91a";
 }
 
-.section-subtitle {
-    max-width: 500px;
+.mbri-cloud:before {
+  content: "\e91b";
 }
 
-.btn {
-    padding: 15px 32px;
-    font-size: 14px;
-    font-weight: 700;
-    transition: all 0.5s;
-    letter-spacing: 0.6px;
-    color: #fff;
-    box-shadow: none !important;
-    text-transform: uppercase;
-    outline: none !important;
+.mbri-code:before {
+  content: "\e91c";
 }
 
-.btn-round {
-    border-radius: 30px;
+.mbri-contact-form:before {
+  content: "\e91d";
 }
 
-.btn-custom {
-    border: 1px solid;
+.mbri-credit-card:before {
+  content: "\e91e";
 }
 
-.btn-custom:hover,
-.btn-custom:focus,
-.btn-custom:active,
-.btn-custom.active,
-.btn-custom.focus,
-.btn-custom:active,
-.btn-custom:focus,
-.btn-custom:hover,
-.open>.dropdown-toggle.btn-custom {
-    color: #f3f3f3;
+.mbri-cursor-click:before {
+  content: "\e91f";
 }
 
-.btn-outline-custom {
-    border: 2px solid #f5f5f5;
+.mbri-cust-feedback:before {
+  content: "\e920";
 }
 
-.btn-outline-custom:hover,
-.btn-outline-custom:focus,
-.btn-outline-custom:active,
-.btn-outline-custom.active,
-.btn-outline-custom.focus,
-.btn-outline-custom:active,
-.btn-outline-custom:focus,
-.btn-outline-custom:hover,
-.open>.dropdown-toggle.btn-outline-custom {
-    color: #000;
-    background-color: #fff;
-    border-color: #fff;
+.mbri-database:before {
+  content: "\e921";
 }
 
-.bg-overlay {
-    background-color: rgba(0, 0, 0, 0.69);
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
+.mbri-delivery:before {
+  content: "\e922";
 }
 
+.mbri-desktop:before {
+  content: "\e923";
+}
 
-/*==========================
-        3.NAVBAR CUSTOM
-============================*/
+.mbri-devices:before {
+  content: "\e924";
+}
 
-.custom-nav {
-    background-color: transparent;
-    padding: 20px 0px;
-    width: 100%;
-    border-radius: 0px;
-    z-index: 999;
-    margin-bottom: 0px;
-    transition: all 0.5s ease-in-out;
+.mbri-down:before {
+  content: "\e925";
 }
 
-.custom-nav .navbar-nav li a {
-    color: #fff !important;
-    font-size: 15px;
-    background-color: transparent !important;
-    margin: 0 7px;
-    letter-spacing: 0.05em;
-    line-height: 24px;
-    transition: all 0.5s;
-    font-weight: 500;
+.mbri-download:before {
+  content: "\e926";
 }
 
-.custom-nav .navbar-brand .logo-light,
-.custom-nav .navbar-brand .logo-dark {
-    height: 27px;
+.mbri-drag-n-drop:before {
+  content: "\e927";
 }
 
-.logo .logo-light {
-    display: inline-block;
+.mbri-drag-n-drop2:before {
+  content: "\e928";
 }
 
-.stickyadd .logo .logo-dark {
-    display: inline-block;
+.mbri-edit:before {
+  content: "\e929";
 }
 
-.stickyadd .logo .logo-light {
-    display: none;
+.mbri-edit2:before {
+  content: "\e92a";
 }
 
-.logo .logo-dark {
-    display: none;
+.mbri-error:before {
+  content: "\e92b";
 }
 
-.custom-nav .navbar-brand {
-    color: #fff !important;
-    text-transform: uppercase;
+.mbri-extension:before {
+  content: "\e92c";
 }
 
-.custom-nav .navbar-toggler {
-    color: #fff;
-    font-size: 35px;
-    padding: 0px;
+.mbri-features:before {
+  content: "\e92d";
 }
 
-.custom-nav.stickyadd {
-    background-color: #fff !important;
-    box-shadow: 0 1px 8px 3px rgba(0, 0, 0, 0.050980392156862744);
-    padding: 15px 0px;
+.mbri-file:before {
+  content: "\e92e";
 }
 
-.custom-nav.stickyadd .navbar-nav li a {
-    color: #000 !important;
+.mbri-flag:before {
+  content: "\e92f";
 }
 
+.mbri-folder:before {
+  content: "\e930";
+}
 
-/*===========================
-        4.HOME
-=============================*/
+.mbri-gift:before {
+  content: "\e931";
+}
 
-.header-bg-img {
-    background-image: url(../images/header-bg.jpg);
-    position: relative;
-    background-size: cover;
-    background-position: center center;
+.mbri-github:before {
+  content: "\e932";
 }
 
-.header-content {
-    max-width: 800px;
+.mbri-globe-2:before {
+  content: "\e933";
 }
 
-.header-table-center {
-    display: table-cell;
-    vertical-align: middle;
+.mbri-globe:before {
+  content: "\e934";
 }
 
-.header-table {
-    display: table;
-    width: 100%;
-    height: 100%;
+.mbri-growing-chart:before {
+  content: "\e935";
 }
 
-.header-name {
-    font-size: 54px;
+.mbri-hearth:before {
+  content: "\e936";
 }
 
-.header-desc {
-    max-width: 500px;
-    line-height: 1.8;
-    color: rgba(255, 255, 255, 0.75) !important;
+.mbri-help:before {
+  content: "\e937";
 }
 
-.scroll_down {
-    position: absolute;
-    bottom: 5vh;
-    width: 100%;
-    text-align: center;
-    color: #fff;
-    font-size: 13px;
-    z-index: 8;
+.mbri-home:before {
+  content: "\e938";
 }
 
-.scroll_down i {
-    position: relative;
-    -webkit-animation: bounce 2s infinite;
-    animation: bounce 2s infinite;
-    height: 44px;
-    width: 28px;
-    line-height: 54px;
-    border-radius: 30px;
-    border: 2px solid #ffffff;
-    display: inline-block;
-    color: #fff;
-    font-size: 10px;
+.mbri-hot-cup:before {
+  content: "\e939";
 }
 
-.scroll_down i:after {
-    content: "";
-    position: absolute;
-    top: 22px;
-    left: 11px;
-    border-radius: 2px;
-    z-index: -1;
-    bottom: 0px;
-    transition: all .2s;
-    height: 10px;
-    width: 3px;
-    background: #fff;
+.mbri-idea:before {
+  content: "\e93a";
 }
 
-/*HOME 4*/
+.mbri-image-gallery:before {
+  content: "\e93b";
+}
 
-.curv-img {
-    position: absolute;
-    width: 100%;
-    bottom: 0px;
-    z-index: 1;
+.mbri-image-slider:before {
+  content: "\e93c";
 }
 
-.curv-img svg {
-    display: block;
+.mbri-info:before {
+  content: "\e93d";
 }
 
-/*HOME 7*/
+.mbri-italic:before {
+  content: "\e93e";
+}
 
-.clip-home {
-    clip-path: polygon(0 0, 100% 0, 100% 83%, 50% 100%, 0 83%);
-    position: relative;
+.mbri-key:before {
+  content: "\e93f";
 }
 
-/*DEMO 16*/
+.mbri-laptop:before {
+  content: "\e940";
+}
 
-.wave_sec {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+.mbri-layers:before {
+  content: "\e941";
 }
 
-.wave_sec svg {
-    height: 180px;
+.mbri-left-right:before {
+  content: "\e942";
 }
 
-/*===========================
-        5.ABOUT
-=============================*/
+.mbri-left:before {
+  content: "\e943";
+}
 
-.about-social li a {
-    color: #000;
-    display: inline-block;
-    height: 42px;
-    width: 42px;
-    font-size: 20px;
-    border-radius: 50%;
-    border: 2px solid #d4d4d4;
-    line-height: 38px;
-    transition: all 0.5s;
-    text-align: center;
+.mbri-letter:before {
+  content: "\e944";
 }
 
+.mbri-like:before {
+  content: "\e945";
+}
 
-/*===========================
-        6.SERVICES
-=============================*/
+.mbri-link:before {
+  content: "\e946";
+}
 
-.services-boxes {
-    border: 1px solid #e8e8e8;
+.mbri-lock:before {
+  content: "\e947";
 }
 
-.services-boxes .services-boxes-icon i {
-    font-size: 44px;
+.mbri-login:before {
+  content: "\e948";
 }
 
-.services-boxes .services-title-border {
-    height: 2px;
-    width: 40px;
-    margin: 15px auto;
-    transition: all 0.5s;
+.mbri-logout:before {
+  content: "\e949";
 }
 
-.services-boxes:hover .services-title-border {
-    width: 60px;
+.mbri-magic-stick:before {
+  content: "\e94a";
 }
 
-.service-box {
-    border: 1px solid #eaeaea;
-    border-radius: 8px;
+.mbri-map-pin:before {
+  content: "\e94b";
 }
 
-.services-boxes h5 {
-    font-weight: 600;
+.mbri-menu:before {
+  content: "\e94c";
 }
 
-.service-box .service-content h5 {
-    font-size: 20px;
-    font-weight: 700;
+.mbri-mobile:before {
+  content: "\e94d";
 }
 
-.service-box .service-content p {
-    font-size: 15px;
+.mbri-mobile2:before {
+  content: "\e94e";
 }
 
+.mbri-mobirise:before {
+  content: "\e94f";
+}
 
-/*===========================
-        7.CLIENT
-=============================*/
+.mbri-more-horizontal:before {
+  content: "\e950";
+}
 
-.testi_boxes {
-    max-width: 750px;
+.mbri-more-vertical:before {
+  content: "\e951";
 }
 
-.client_review {
-    font-size: 18px;
+.mbri-music:before {
+  content: "\e952";
 }
 
-.client_name {
-    font-size: 16px;
+.mbri-new-file:before {
+  content: "\e953";
 }
 
-.testi_boxes .tam_testi_icon {
-    font-size: 50px;
+.mbri-numbered-list:before {
+  content: "\e954";
 }
 
-.owl-theme .owl-controls .owl-page {
-    margin: 20px 0px;
+.mbri-opened-folder:before {
+  content: "\e955";
 }
 
-.owl-theme .owl-controls .owl-page span {
-    display: block;
-    width: 12px;
-    height: 6px;
-    margin: 5px 4px;
-    filter: Alpha(Opacity=50);
-    opacity: 0.5;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-    transition: all 0.5s;
+.mbri-pages:before {
+  content: "\e956";
 }
 
-.owl-theme .owl-controls .owl-page.active span {
-    width: 20px;
+.mbri-paper-plane:before {
+  content: "\e957";
 }
 
+.mbri-paperclip:before {
+  content: "\e958";
+}
 
-/*===========================
-        8.WORK
-=============================*/
+.mbri-photo:before {
+  content: "\e959";
+}
 
-.work_menu li a {
-    cursor: pointer;
-    display: block;
-    border-radius: 30px;
-    letter-spacing: 0.03em;
-    margin-bottom: 5px;
-    font-weight: 600;
-    font-size: 14px;
-    padding: 6px 16px;
-    transition: all 0.5s;
-    margin-top: 5px;
+.mbri-photos:before {
+  content: "\e95a";
 }
 
-.work_menu a.active,
-.work_menu a:hover {
-    color: #fff !important;
+.mbri-pin:before {
+  content: "\e95b";
 }
 
-.work_item {
-    position: relative;
-    padding: 15px;
+.mbri-play:before {
+  content: "\e95c";
 }
 
-.work_box {
-    overflow: hidden;
-    position: relative;
+.mbri-plus:before {
+  content: "\e95d";
 }
 
-.work_box .work_img {
-    position: relative;
-    overflow: hidden;
+.mbri-preview:before {
+  content: "\e95e";
 }
 
-.work_box .work_img:after {
-    content: " ";
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 5px;
-    transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+.mbri-print:before {
+  content: "\e95f";
 }
 
-.work_box .work_img>img {
-    transition: all 0.3s cubic-bezier(0.3, 0.1, 0.58, 1);
-    border-radius: 0;
+.mbri-protect:before {
+  content: "\e960";
 }
 
-.work_box .work_detail {
-    opacity: 0;
-    color: #ffffff;
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    position: absolute;
-    left: 0;
-    overflow: hidden;
-    transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+.mbri-question:before {
+  content: "\e961";
 }
 
-.work_box .work_detail h4 {
-    font-size: 18px;
+.mbri-quote-left:before {
+  content: "\e962";
 }
 
-.work_box .work_detail p {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 14px;
+.mbri-quote-right:before {
+  content: "\e963";
 }
 
-.work_box:hover .work_detail {
-    top: 50%;
-    transform: translate(0, -50%);
-    opacity: 1;
+.mbri-redo:before {
+  content: "\e964";
 }
 
-.work_box:hover .work_img:after {
-    background: rgba(0, 0, 0, 0.8);
+.mbri-refresh:before {
+  content: "\e965";
 }
 
-.work_box:hover .work_img>img {
-    transform: scale(1.05);
+.mbri-responsive:before {
+  content: "\e966";
 }
 
+.mbri-right:before {
+  content: "\e967";
+}
 
-/*=========================
-        9.CONTACT
-===========================*/
+.mbri-rocket:before {
+  content: "\e968";
+}
 
-.form-kerri .form-control {
-    box-shadow: none !important;
-    height: 50px;
-    border: 2px solid #e0e0e0;
+.mbri-sad-face:before {
+  content: "\e969";
 }
 
-.form-kerri textarea.form-control {
-    height: auto;
+.mbri-sale:before {
+  content: "\e96a";
 }
 
-.contact_detail-title {
-    font-size: 18px;
+.mbri-save:before {
+  content: "\e96b";
 }
 
-.error {
-    margin: 8px 0px;
-    display: none;
-    color: red;
+.mbri-search:before {
+  content: "\e96c";
 }
 
-.error_msg {
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 18px;
-    color: red;
-    font-weight: 700;
+.mbri-setting:before {
+  content: "\e96d";
 }
 
-.gig_loader {
-    display: none;
+.mbri-setting2:before {
+  content: "\e96e";
 }
 
-#success_msg {
-    text-align: center;
-    margin-bottom: 20px;
+.mbri-setting3:before {
+  content: "\e96f";
 }
 
-#success_msg h3 {
-    color: #0dba26;
-    font-size: 22px;
+.mbri-share:before {
+  content: "\e970";
 }
 
+.mbri-shopping-bag:before {
+  content: "\e971";
+}
 
-/*======================
-        10.FOOTER
-========================*/
+.mbri-shopping-basket:before {
+  content: "\e972";
+}
 
-.footer {
-    padding: 70px 0px;
-    background-color: #242424 !important;
+.mbri-shopping-cart:before {
+  content: "\e973";
 }
 
-.footer .footer-alt p {
-    font-size: 16px;
+.mbri-sites:before {
+  content: "\e974";
 }
 
-.footer .footer-alt ul li a {
-    border-radius: 50%;
-    transition: all 0.5s;
-    background-color: rgba(241, 241, 241, 0.08);
-    width: 42px;
-    height: 42px;
-    display: block;
-    font-size: 18px;
-    line-height: 42px;
-    text-align: center;
+.mbri-smile-face:before {
+  content: "\e975";
 }
 
+.mbri-speed:before {
+  content: "\e976";
+}
 
-/*===========================
-        11.RESPONSIVE
-=============================*/
+.mbri-star:before {
+  content: "\e977";
+}
 
-@media (min-width: 200px) and (max-width: 768px) {
-    .custom-nav {
-        background-color: #fff !important;
-        padding: 10px 0px !important;
-    }
+.mbri-success:before {
+  content: "\e978";
+}
 
-    .custom-nav .container {
-        width: 85%;
-    }
+.mbri-sun:before {
+  content: "\e979";
+}
 
-    .custom-nav .navbar-toggler {
-        color: #000;
-        font-size: 32px;
-        border: none;
-    }
+.mbri-sun2:before {
+  content: "\e97a";
+}
 
-    .custom-nav .logo .logo-dark {
-        display: inline-block;
-    }
+.mbri-tablet-vertical:before {
+  content: "\e97b";
+}
 
-    .custom-nav .navbar-nav li a {
-        color: rgba(0, 0, 0, 0.6) !important;
-    }
+.mbri-tablet:before {
+  content: "\e97c";
+}
 
-    .custom-nav .logo .logo-light {
-        display: none;
-    }
+.mbri-target:before {
+  content: "\e97d";
+}
 
-    .h-100vh {
-        height: auto;
-        padding: 120px 0 140px;
-    }
+.mbri-timer:before {
+  content: "\e97e";
+}
 
-    .header-bg-img {
-        clip-path: none;
-        padding: 120px 0 140px;
-    }
+.mbri-to-ftp:before {
+  content: "\e97f";
+}
 
-    .wave-home.h-100vh {
-        height: auto;
-        padding: 120px 0 190px;
-    }
+.mbri-to-local-drive:before {
+  content: "\e980";
+}
 
-    .custom-nav .navbar-nav li a {
-        margin: 0 0px;
-        line-height: 15px;
-    }
+.mbri-touch-swipe:before {
+  content: "\e981";
+}
 
-    .header-name {
-        font-size: 38px;
-    }
+.mbri-touch:before {
+  content: "\e982";
+}
 
-    .clip-home {
-        clip-path: none;
-    }
+.mbri-trash:before {
+  content: "\e983";
 }
 
-@media (max-width: 2560px) {
-    .home-bg .curv-img {
-        bottom: -5px;
-    }
+.mbri-underline:before {
+  content: "\e984";
 }
 
-#color-switcher div h3 {
-    font-size: 16px;
-    margin: 8px 3px 12px
+.mbri-undo:before {
+  content: "\e985";
 }
 
-#color-switcher {
-    background: none repeat scroll 0 0 #ffff;
-    box-shadow: 0px 0px 14px 0 rgba(0, 0, 0, .08);
-    left: -189px;
-    position: fixed;
-    top: 17%;
-    width: 189px;
-    z-index: 9999;
-    padding: 10px 5px
+.mbri-unlink:before {
+  content: "\e986";
 }
 
-#color-switcher div {
-    padding: 5px 10px
+.mbri-unlock:before {
+  content: "\e987";
 }
 
-#color-switcher .bottom {
-    background: none repeat scroll 0 0 #fff;
-    color: #252525;
-    padding: 0
+.mbri-up-down:before {
+  content: "\e988";
 }
 
-#color-switcher .bottom a.settings {
-    background: none repeat scroll 0 0 #2b2424;
-    box-shadow: 2px 2px 0 0 rgba(0, 0, 0, .08);
-    display: block;
-    height: 41px;
-    position: absolute;
-    right: -40px;
-    top: 0;
-    width: 40px;
-    padding: 3px
+.mbri-up:before {
+  content: "\e989";
 }
 
-#color-switcher .bottom a {
-    text-decoration: none
+.mbri-update:before {
+  content: "\e98a";
 }
 
-#color-switcher .bottom a.settings i {
-    margin-left: 5px;
-    color: #fff;
-    font-size: 24px;
-    position: absolute
+.mbri-upload:before {
+  content: "\e98b";
 }
 
-ul.pattern {
-    list-style: none outside none;
-    margin: 0 0 0;
-    overflow: hidden;
-    padding: 0;
-    border-radius: 0
+.mbri-user:before {
+  content: "\e98c";
 }
 
-ul.pattern li {
-    float: left;
-    margin: 2px
+.mbri-user2:before {
+  content: "\e98d";
 }
 
-ul.pattern li a {
-    cursor: pointer;
-    display: block;
-    height: 35px;
-    width: 35px;
-    border-radius: 16px 16px 0;
-    margin: 5px
+.mbri-users:before {
+  content: "\e98e";
 }
 
-ul.pattern .color1 {
-    background: #e65f78;
+.mbri-video-play:before {
+  content: "\e98f";
 }
 
-ul.pattern .color2 {
-    background: #37b8df;
+.mbri-video:before {
+  content: "\e990";
 }
 
-ul.pattern .color3 {
-    background: #31b164;
+.mbri-watch:before {
+  content: "\e991";
 }
 
-ul.pattern .color4 {
-    background: #5d69f6;
+.mbri-website-theme:before {
+  content: "\e992";
 }
 
-ul.pattern .color5 {
-    background: #87ceeb;
+.mbri-wifi:before {
+  content: "\e993";
 }
 
-ul.pattern .color6 {
-    background: #f2b31a;
+.mbri-windows:before {
+  content: "\e994";
 }
 
-@media only screen and (max-width:479px) {
-    #color-switcher {
-        display: none
-    }
+.mbri-zoom-out:before {
+  content: "\e995";
 }
