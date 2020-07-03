@@ -795,13 +795,17 @@ Change widths as necessary
 }
 
 .pic {
-  width: 33.33%;
-  height: 200px;
-  overflow: hidden;
-  margin: 0 auto;
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
+  width: 100%;
+    height: 300px;
+    overflow: hidden;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 6px 5px 10px rgba(0,0,0,.5);
+    margin-bottom:20px;
+    border: 10px solid #fff;
+    border-radius: 4px;
 }
 
 .pic:before {
